@@ -1,4 +1,5 @@
 /Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/GN.dir
+/Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/Ceres_GN.dir
 /Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/Least_SQUARE.dir
 /Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/RANSAC_least_square.dir
 /Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/edit_cache.dir

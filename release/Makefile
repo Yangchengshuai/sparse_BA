@@ -130,6 +130,19 @@ GN/fast:
 .PHONY : GN/fast
 
 #=============================================================================
+# Target rules for targets named Ceres_GN
+
+# Build rule for target.
+Ceres_GN: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Ceres_GN
+.PHONY : Ceres_GN
+
+# fast build rule for target.
+Ceres_GN/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ceres_GN.dir/build.make CMakeFiles/Ceres_GN.dir/build
+.PHONY : Ceres_GN/fast
+
+#=============================================================================
 # Target rules for targets named Least_SQUARE
 
 # Build rule for target.
@@ -178,6 +191,30 @@ GN.s: GN.cpp.s
 GN.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GN.dir/build.make CMakeFiles/GN.dir/GN.cpp.s
 .PHONY : GN.cpp.s
+
+GN_ceres.o: GN_ceres.cpp.o
+.PHONY : GN_ceres.o
+
+# target to build an object file
+GN_ceres.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ceres_GN.dir/build.make CMakeFiles/Ceres_GN.dir/GN_ceres.cpp.o
+.PHONY : GN_ceres.cpp.o
+
+GN_ceres.i: GN_ceres.cpp.i
+.PHONY : GN_ceres.i
+
+# target to preprocess a source file
+GN_ceres.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ceres_GN.dir/build.make CMakeFiles/Ceres_GN.dir/GN_ceres.cpp.i
+.PHONY : GN_ceres.cpp.i
+
+GN_ceres.s: GN_ceres.cpp.s
+.PHONY : GN_ceres.s
+
+# target to generate assembly for a file
+GN_ceres.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ceres_GN.dir/build.make CMakeFiles/Ceres_GN.dir/GN_ceres.cpp.s
+.PHONY : GN_ceres.cpp.s
 
 Ransac_least_square.o: Ransac_least_square.cpp.o
 .PHONY : Ransac_least_square.o
@@ -235,12 +272,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Ceres_GN"
 	@echo "... GN"
 	@echo "... Least_SQUARE"
 	@echo "... RANSAC_least_square"
 	@echo "... GN.o"
 	@echo "... GN.i"
 	@echo "... GN.s"
+	@echo "... GN_ceres.o"
+	@echo "... GN_ceres.i"
+	@echo "... GN_ceres.s"
 	@echo "... Ransac_least_square.o"
 	@echo "... Ransac_least_square.i"
 	@echo "... Ransac_least_square.s"
