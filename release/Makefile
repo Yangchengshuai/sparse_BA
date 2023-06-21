@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named G20_GN
+
+# Build rule for target.
+G20_GN: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 G20_GN
+.PHONY : G20_GN
+
+# fast build rule for target.
+G20_GN/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/G20_GN.dir/build.make CMakeFiles/G20_GN.dir/build
+.PHONY : G20_GN/fast
+
+#=============================================================================
 # Target rules for targets named GN
 
 # Build rule for target.
@@ -216,6 +229,30 @@ GN_ceres.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ceres_GN.dir/build.make CMakeFiles/Ceres_GN.dir/GN_ceres.cpp.s
 .PHONY : GN_ceres.cpp.s
 
+GN_g2o.o: GN_g2o.cpp.o
+.PHONY : GN_g2o.o
+
+# target to build an object file
+GN_g2o.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/G20_GN.dir/build.make CMakeFiles/G20_GN.dir/GN_g2o.cpp.o
+.PHONY : GN_g2o.cpp.o
+
+GN_g2o.i: GN_g2o.cpp.i
+.PHONY : GN_g2o.i
+
+# target to preprocess a source file
+GN_g2o.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/G20_GN.dir/build.make CMakeFiles/G20_GN.dir/GN_g2o.cpp.i
+.PHONY : GN_g2o.cpp.i
+
+GN_g2o.s: GN_g2o.cpp.s
+.PHONY : GN_g2o.s
+
+# target to generate assembly for a file
+GN_g2o.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/G20_GN.dir/build.make CMakeFiles/G20_GN.dir/GN_g2o.cpp.s
+.PHONY : GN_g2o.cpp.s
+
 Ransac_least_square.o: Ransac_least_square.cpp.o
 .PHONY : Ransac_least_square.o
 
@@ -273,6 +310,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Ceres_GN"
+	@echo "... G20_GN"
 	@echo "... GN"
 	@echo "... Least_SQUARE"
 	@echo "... RANSAC_least_square"
@@ -282,6 +320,9 @@ help:
 	@echo "... GN_ceres.o"
 	@echo "... GN_ceres.i"
 	@echo "... GN_ceres.s"
+	@echo "... GN_g2o.o"
+	@echo "... GN_g2o.i"
+	@echo "... GN_g2o.s"
 	@echo "... Ransac_least_square.o"
 	@echo "... Ransac_least_square.i"
 	@echo "... Ransac_least_square.s"

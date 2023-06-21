@@ -1,3 +1,4 @@
+/Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/G20_GN.dir
 /Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/GN.dir
 /Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/Ceres_GN.dir
 /Users/chengshuai/Documents/work/Curve fitting/release/CMakeFiles/Least_SQUARE.dir
